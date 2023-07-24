@@ -1,16 +1,13 @@
 {
   "name": "godevapi-challenge",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo dev --parallel",
+    "dev": "turbo dev --parallel"
   },
   "workspaces": [
     "apps/*",
     "packages/*"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "gabrielbsx"
 }
