@@ -9,12 +9,15 @@ export class InMemoryConnectorRepositoryImpl
   public async findByName(name: string): Promise<ConnectorEntity[]> {
     return this.data.filter((connector) => connector.name === name);
   }
+
   public async findByCategory(category: string): Promise<ConnectorEntity[]> {
     return this.data.filter((connector) => connector.category === category);
   }
+
   public async findByType(type: string): Promise<ConnectorEntity[]> {
     return this.data.filter((connector) => connector.type === type);
   }
+
   public async findByPrivacy(privacy: string): Promise<ConnectorEntity[]> {
     return this.data.filter((connector) => connector.privacy === privacy);
   }
