@@ -8,7 +8,7 @@ export class TransferContactsListUseCaseImpl implements TransferContactsListUseC
   ) {}
 
   public async execute (input: TransferContactsListUseCaseInput): Promise<boolean> {
-    const contacts = await this.fromContactStorageService.getContacts(input.spreadId)
+    const contacts = await this.fromContactStorageService.getContacts(input.sheetId)
     await this.toContactStorageService.saveContacts(contacts)
     return true
   }

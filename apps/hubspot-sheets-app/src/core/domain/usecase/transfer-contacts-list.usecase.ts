@@ -3,7 +3,7 @@ export interface TransferContactsListUseCase {
 }
 
 export interface TransferContactsListUseCaseInput {
-  spreadId?: string
+  sheetId?: string
 }
 
 export type TransferContactsListUseCaseOutput = boolean
