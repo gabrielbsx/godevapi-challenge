@@ -1,0 +1,28 @@
+{
+  "name": "hubspot-sheets-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.ts",
+  "scripts": {
+    "start:dev": "tsx watch src/main.ts",
+    "build": "tsup src"
+  },
+  "author": "gabrielbsx",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^37.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "tsup": "^7.1.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "@hubspot/api-client": "^9.0.0",
+    "dotenv": "^16.3.1"
+  }
+}
