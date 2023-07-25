@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest'
-import { InMemoryContactService } from '@infra/adapter/service/in-memory-contact.service'
+import { InMemoryContactService } from '@infra/adapter/service/in-memory/in-memory-contact.service'
 import { GetAllContactsUseCaseImpl } from '@core/application/usecase/get-all-contacts.usecase'
 import { mockContact } from 'test/core/domain/mocks/mock-contacts'
 import { type Contact } from '@core/domain/entity/contact'
