@@ -1,13 +1,6 @@
-export enum ConnectorPrivacy {
-  PUBLIC = 'PUBLIC',
-  PRIVATE = 'PRIVATE',
-}
-
-export enum ConnectorType {
-  REST = 'REST',
-  SOAP = 'SOAP',
-  BD = 'BD',
-}
+import { ConnectorType } from './connector-type';
+import { ConnectorPrivacy } from './connector-privacy';
+import { randomUUID } from 'node:crypto';
 
 export interface ConnectorProps {
   name: string;
@@ -26,7 +19,7 @@ export class ConnectorEntity {
 
   constructor(props: ConnectorProps, id?: string) {
     this.props = props;
-    this._id = id;
+    this._id = id ?? randomUUID();
   }
 
   public get id(): string {
