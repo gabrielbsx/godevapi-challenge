@@ -1,6 +1,6 @@
 import { TransferContactsListUseCaseImpl } from '@core/application/usecase/transfer-contacts-list.usecase'
 import { type Contact } from '@core/domain/entity/contact'
-import { type ContactStorageService } from '@core/domain/port/contact-storage-service'
+import { type ContactStorageService } from '@core/application/port/contact-storage-service'
 import { InMemoryContactService } from '@infra/adapter/service/in-memory/in-memory-contact.service'
 import { mockContact } from 'test/core/domain/mocks/mock-contacts'
 import { describe, expect, test } from 'vitest'

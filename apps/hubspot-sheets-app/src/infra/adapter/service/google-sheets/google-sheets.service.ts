@@ -1,5 +1,5 @@
 import { type Contact } from '@core/domain/entity/contact'
-import { type ContactStorageService } from '@core/domain/port/contact-storage-service'
+import { type ContactStorageService } from '@core/application/port/contact-storage-service'
 import { JWT } from 'google-auth-library'
 import { GoogleSpreadsheet } from 'google-spreadsheet'
 import { GoogleSheetsServiceMapper } from './mapper/google-sheets.mapper'

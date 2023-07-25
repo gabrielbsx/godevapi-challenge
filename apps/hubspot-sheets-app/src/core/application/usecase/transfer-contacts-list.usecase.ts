@@ -1,4 +1,4 @@
-import { type ContactStorageService } from '@core/domain/port/contact-storage-service'
+import { type ContactStorageService } from '@core/application/port/contact-storage-service'
 import { type TransferContactsListUseCaseInput, type TransferContactsListUseCase } from '@core/domain/usecase/transfer-contacts-list.usecase'
 
 export class TransferContactsListUseCaseImpl implements TransferContactsListUseCase {
