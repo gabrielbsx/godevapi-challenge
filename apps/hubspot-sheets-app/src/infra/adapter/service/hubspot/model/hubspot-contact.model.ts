@@ -6,6 +6,5 @@ export interface HubspotContactModel {
     lastname: string
     phone: string
     website: string
-    company: string
   }
 }

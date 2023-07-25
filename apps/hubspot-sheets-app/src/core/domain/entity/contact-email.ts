@@ -1,8 +1,8 @@
 export class ContactEmail {
   private readonly email: string
 
-  constructor (email: string, businessName: string) {
-    const isEmailCorporative = this.validateIfEmailIsCorporative(email, businessName)
+  constructor (email: string, businessDomain: string) {
+    const isEmailCorporative = this.validateIfEmailIsCorporative(email, businessDomain)
 
     if (!isEmailCorporative) {
       throw new Error('Email is not corporative')
@@ -11,11 +11,10 @@ export class ContactEmail {
     this.email = email
   }
 
-  private validateIfEmailIsCorporative (email: string, businessName: string): boolean {
-    businessName = businessName.toLowerCase()
+  private validateIfEmailIsCorporative (email: string, businessDomain: string): boolean {
+    businessDomain = businessDomain.toLowerCase()
     email = email.toLowerCase()
-    const businessNameWithOnlyAcceptedCharacters = businessName.replace(/[^a-z0-9]/g, '')
-    return email.includes(businessNameWithOnlyAcceptedCharacters)
+    return email.includes(businessDomain)
   }
 
   public get value (): string {
