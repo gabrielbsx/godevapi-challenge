@@ -15,6 +15,7 @@
       "@domain/*": ["src/domain/*"],
       "@infra/*": ["src/infra/*"],
       "@presentation/*": ["src/presentation/*"],
+      "@helpers/*": ["src/helpers/*"],
     },
     "incremental": true,
     "skipLibCheck": true,
