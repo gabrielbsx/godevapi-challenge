@@ -2,14 +2,16 @@ import { Business } from '@core/domain/entity/business'
 import { Contact } from '@core/domain/entity/contact'
 import { ContactEmail } from '@core/domain/entity/contact-email'
 import { type SimplePublicObjectWithAssociations } from '@hubspot/api-client/lib/codegen/crm/contacts'
-export class HubspotServiceMapper {
+export class HubspotContactServiceMapper {
   static toService (data: Contact): SimplePublicObjectWithAssociations {
+    const [firstName, ...lastName] = data.completeName.split(' ')
+    const lastNameJoined = lastName.join(' ')
     return {
       id: data.id as string,
       properties: {
         email: data.email.value,
-        firstname: data.completeName.split(' ')[0],
-        lastname: data.completeName.split(' ')[1],
+        firstname: firstName,
+        lastname: lastNameJoined,
         phone: data.phone,
         website: data.website
       },
@@ -18,16 +20,16 @@ export class HubspotServiceMapper {
     }
   }
 
-  static toDomain (data: SimplePublicObjectWithAssociations): Contact {
+  static toDomain (data: { business: SimplePublicObjectWithAssociations, contact: SimplePublicObjectWithAssociations }): Contact {
     return new Contact({
       business: new Business({
-        name: data.properties.company,
-        domain: data.properties.website
+        name: data.business.properties.name,
+        domain: data.business.properties.domain
       }),
-      completeName: `${data.properties.firstname} ${data.properties.lastname}`,
-      email: new ContactEmail(data.properties.email, data.properties.company),
-      phone: data.properties.phone,
-      website: data.properties.website
+      completeName: `${data.contact.properties.firstname} ${data.contact.properties.lastname}`,
+      email: new ContactEmail(data.contact.properties.email, data.business.properties.domain),
+      phone: data.contact.properties.phone,
+      website: data.contact.properties.website
     })
   }
 }
