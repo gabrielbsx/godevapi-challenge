@@ -89,4 +89,8 @@ export class ConnectorEntity {
   public set status(status: string) {
     this.props.status = status;
   }
+
+  public get propsValue(): ConnectorProps {
+    return this.props;
+  }
 }
