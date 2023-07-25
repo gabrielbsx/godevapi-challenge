@@ -101,6 +101,9 @@ importers:
       '@hubspot/api-client':
         specifier: ^9.0.0
         version: 9.0.0
+      commander:
+        specifier: ^11.0.0
+        version: 11.0.0
       dotenv:
         specifier: ^16.3.1
         version: 16.3.1
@@ -2669,6 +2672,11 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: 1.0.0
+
+  /commander@11.0.0:
+    resolution: {integrity: sha512-9HMlXtt/BNoYr8ooyjjNRdIilOTkVJXB+GhxMTtOKwk0R4j4lS4NpjuqmRxroBfnfTSHQIHQB7wryHhXarNjmQ==}
+    engines: {node: '>=16'}
+    dev: false
 
   /commander@2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
