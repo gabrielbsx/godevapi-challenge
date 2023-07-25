@@ -95,6 +95,9 @@ importers:
       '@faker-js/faker':
         specifier: ^8.0.2
         version: 8.0.2
+      '@godevapi/helpers':
+        specifier: workspace:*
+        version: link:../../packages/helpers
       '@hubspot/api-client':
         specifier: ^9.0.0
         version: 9.0.0
@@ -138,6 +141,8 @@ importers:
       vitest:
         specifier: ^0.33.0
         version: 0.33.0
+
+  packages/helpers: {}
 
 packages:
 

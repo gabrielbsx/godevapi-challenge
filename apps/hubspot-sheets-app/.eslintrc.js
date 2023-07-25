@@ -12,5 +12,6 @@ module.exports = {
     },
     ignorePatterns: ['.eslintrc.js'],
     rules: {
+        '@typescript-eslint/no-extraneous-class': 'off',
     }
 }
