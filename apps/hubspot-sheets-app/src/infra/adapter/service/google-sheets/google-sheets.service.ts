@@ -38,7 +38,7 @@ export class GoogleSheetsServiceImpl implements ContactStorageService {
     return rows.map((row) => GoogleSheetsServiceMapper.toDomain(row))
   }
 
-  public async saveContacts (contacts: Contact[]): Promise<void> {
-
+  public async saveContacts (_contacts: Contact[]): Promise<void> {
+    throw new Error('Method saveContacts in google sheets not implemented.')
   }
 }
