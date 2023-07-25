@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-export class TransferContactsListUseCaseImpl {
+module.exports = class TransferContactsListUseCaseImpl {
   toContactStorageService
   fromContactStorageService
 

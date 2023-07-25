@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-const { CommanderControllerAdapter } = require('@infra/adapter/cli/commander/cli.controller')
+const { CommanderControllerAdapter } = require('../../infra/adapter/cli/commander/cli.controller')
 const { TransferContactsListFactory } = require('../factory/transfer-contacts-list.factory')
 
-export class TransferContactsListAction {
+module.exports = class TransferContactsListAction {
   static register (app) {
     app
       .command('transfer-contacts-list')

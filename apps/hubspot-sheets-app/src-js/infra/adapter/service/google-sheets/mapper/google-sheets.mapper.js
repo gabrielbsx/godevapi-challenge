@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-const { Business } = require('@core/domain/entity/business')
-const { Contact } = require('@core/domain/entity/contact')
-const { ContactEmail } = require('@core/domain/entity/contact-email')
+const { Business } = require('../../../../../core/domain/entity/business')
+const { Contact } = require('../../../../../core/domain/entity/contact')
+const { ContactEmail } = require('../../../../../core/domain/entity/contact-email')
 
-export class GoogleSheetsServiceMapper {
+module.exports = class GoogleSheetsServiceMapper {
   static toDomain (data) {
     return new Contact({
       business: new Business({

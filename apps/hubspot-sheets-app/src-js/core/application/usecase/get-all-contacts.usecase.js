@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-export class GetAllContactsUseCaseImpl {
+module.exports = class GetAllContactsUseCaseImpl {
   contactStorageService
 
   constructor (contactStorageService) {

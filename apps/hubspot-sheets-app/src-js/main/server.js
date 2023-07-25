@@ -4,7 +4,7 @@ const express = require('express')
 const { TransferContactsListRoute } = require('./route/transfer-contacts-list.route')
 const { config } = require('dotenv')
 
-export class Server {
+module.exports = class Server {
   app
 
   constructor () {

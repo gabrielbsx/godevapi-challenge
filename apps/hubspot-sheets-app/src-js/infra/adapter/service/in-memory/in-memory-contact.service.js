@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-export class InMemoryContactService {
+module.exports = class InMemoryContactService {
   contacts = []
 
   async getContacts () {

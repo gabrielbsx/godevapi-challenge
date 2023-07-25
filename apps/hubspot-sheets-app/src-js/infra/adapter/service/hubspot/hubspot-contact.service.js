@@ -3,7 +3,7 @@
 const { Client } = require('@hubspot/api-client')
 const { HubspotContactServiceMapper } = require('./mapper/hubspot-contact.mapper')
 
-export class HubspotContactService {
+module.exports = class HubspotContactService {
   static hubspotClient = new Client({ accessToken: process.env.HUBSPOT_API_KEY })
   isSpreadSheet = false
 

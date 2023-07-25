@@ -4,7 +4,7 @@ const { JWT } = require('google-auth-library')
 const { GoogleSpreadsheet } = require('google-spreadsheet')
 const { GoogleSheetsServiceMapper } = require('./mapper/google-sheets.mapper')
 
-export class GoogleSheetsServiceImpl {
+module.exports = class GoogleSheetsServiceImpl {
   static serviceAccountAuth
 
   constructor () {

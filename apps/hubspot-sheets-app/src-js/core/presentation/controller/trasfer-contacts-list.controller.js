@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-export class TransferContactsListController {
+module.exports = class TransferContactsListController {
   transferContactsListUseCase
 
   constructor (transferContactsListUseCase) {

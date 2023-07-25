@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-import { Business } from '@core/domain/entity/business'
-import { Contact } from '@core/domain/entity/contact'
-import { ContactEmail } from '@core/domain/entity/contact-email'
+const { Business } = require('../../../../../core/domain/entity/business')
+const { Contact } = require('../../../../../core/domain/entity/contact')
+const { ContactEmail } = require('../../../../../core/domain/entity/contact-email')
 
-export class HubspotContactServiceMapper {
+module.exports = class HubspotContactServiceMapper {
   static toService (data) {
     const [firstName, ...lastName] = data.completeName.split(' ')
     const lastNameJoined = lastName.join(' ')

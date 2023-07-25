@@ -4,7 +4,7 @@ const { program } = require('commander')
 const { TransferContactsListAction } = require('./action/transfer-contacts-list.action')
 const { config } = require('dotenv')
 
-export class ServerCli {
+module.exports = class ServerCli {
   app
 
   constructor () {

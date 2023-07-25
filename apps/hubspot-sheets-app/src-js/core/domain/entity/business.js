@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-export class Business {
+module.exports = class Business {
   props
 
   constructor (props) {
