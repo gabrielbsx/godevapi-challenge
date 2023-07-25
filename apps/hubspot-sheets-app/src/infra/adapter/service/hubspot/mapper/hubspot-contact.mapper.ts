@@ -2,6 +2,7 @@ import { Business } from '@core/domain/entity/business'
 import { Contact } from '@core/domain/entity/contact'
 import { ContactEmail } from '@core/domain/entity/contact-email'
 import { type SimplePublicObjectWithAssociations } from '@hubspot/api-client/lib/codegen/crm/contacts'
+
 export class HubspotContactServiceMapper {
   static toService (data: Contact): SimplePublicObjectWithAssociations {
     const [firstName, ...lastName] = data.completeName.split(' ')
