@@ -5,7 +5,7 @@ export class ContactEmail {
     const isEmailCorporative = this.validateIfEmailIsCorporative(email, businessDomain)
 
     if (!isEmailCorporative) {
-      throw new Error('Email is not corporative')
+      throw new Error(`Email ${email} is not corporative for domain ${businessDomain}`)
     }
 
     this.email = email
