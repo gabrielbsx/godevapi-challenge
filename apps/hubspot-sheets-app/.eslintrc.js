@@ -13,5 +13,6 @@ module.exports = {
     ignorePatterns: ['.eslintrc.js'],
     rules: {
         '@typescript-eslint/no-extraneous-class': 'off',
+        '@typescript-eslint/no-misused-promises': 'off',
     }
 }
