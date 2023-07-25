@@ -21,7 +21,7 @@ const makeSut = (): SutTypes => {
 describe('TransferContactsListUseCaseImpl', () => {
   test('should return true', async () => {
     const { transferContactsListUseCase } = makeSut()
-    const result = await transferContactsListUseCase.execute()
+    const result = await transferContactsListUseCase.execute({})
     expect(result).toEqual(true)
   })
 
@@ -32,7 +32,7 @@ describe('TransferContactsListUseCaseImpl', () => {
     expect([]).toEqual(await fromContactStorageService.getContacts())
     Array.from({ length: 10 }).forEach(() => mockContacts.push(mockContact()))
     await fromContactStorageService.saveContacts(mockContacts)
-    const result = await transferContactsListUseCase.execute()
+    const result = await transferContactsListUseCase.execute({})
     expect(result).toEqual(true)
     const toContacts = await toContactStorageService.getContacts()
     expect(mockContacts).toEqual(toContacts)
