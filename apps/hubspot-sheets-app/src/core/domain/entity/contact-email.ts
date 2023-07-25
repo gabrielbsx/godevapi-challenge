@@ -12,7 +12,7 @@ export class ContactEmail {
   }
 
   private validateIfEmailIsCorporative (email: string, businessDomain: string): boolean {
-    businessDomain = businessDomain.toLowerCase()
+    businessDomain = businessDomain.toLowerCase().replace('www.', '').replace('http://', '').replace('https://', '')
     email = email.toLowerCase()
     return email.includes(businessDomain)
   }
