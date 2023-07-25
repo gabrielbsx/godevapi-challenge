@@ -7,12 +7,12 @@ import { type SimplePublicObjectWithAssociations } from '@hubspot/api-client/lib
 
 export class HubspotContactService implements ContactStorageService {
   static readonly hubspotClient: Client = new Client({ accessToken: process.env.HUBSPOT_API_KEY })
+  public isSpreadSheet: boolean = false
 
   constructor () {
-    if (HubspotContactService.hubspotClient.config.accessToken !== undefined) {
-      return
+    if (HubspotContactService.hubspotClient.config.accessToken === undefined) {
+      HubspotContactService.hubspotClient.setAccessToken(process.env.HUBSPOT_API_KEY)
     }
-    HubspotContactService.hubspotClient.setAccessToken(process.env.HUBSPOT_API_KEY)
   }
 
   public async getContacts (): Promise<Contact[]> {
