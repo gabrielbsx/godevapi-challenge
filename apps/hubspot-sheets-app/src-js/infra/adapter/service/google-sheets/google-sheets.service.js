@@ -35,7 +35,18 @@ export class GoogleSheetsServiceImpl {
     const sheet = doc.sheetsByIndex[0]
     await sheet.loadCells()
     const rows = await sheet.getRows()
-    return rows.map((row) => GoogleSheetsServiceMapper.toDomain(row))
+    const domainData = rows.map((row) => {
+      try {
+        return GoogleSheetsServiceMapper.toDomain(row)
+      } catch (error) {
+        if (error instanceof Error) {
+          console.error(error.message)
+        }
+        return null
+      }
+    })
+    const domainWithoutNull = domainData.filter((domain) => domain !== null)
+    return domainWithoutNull
   }
 
   async saveContacts (_contacts) {
