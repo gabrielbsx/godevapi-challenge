@@ -51,7 +51,7 @@ Para rodar o servidor em ambiente de desenvolvimento usando TypeScript, utilize 
 npm run start:ts:dev:http
 ```
 
-Para rodar o servidor em ambiente de desenvolvimento usando o pacote Commander, utilize o seguinte comando:
+Para rodar o servidor em ambiente de desenvolvimento usando o pacote Commander, utilize o seguinte comando (exemplo):
 
 ```bash
 npm run start:ts:dev:cli transfer-contacts-list transfer-list --sheet-id="1FVlfOM3pAxCuqzuPep8_vFidQ8FSH2jODecAD7ieNXc"
@@ -65,7 +65,7 @@ Para rodar o servidor em ambiente de produção usando JavaScript, utilize o seg
 npm run start:js:prod:http
 ```
 
-Para rodar o servidor em ambiente de produção usando o pacote Commander, utilize o seguinte comando:
+Para rodar o servidor em ambiente de produção usando o pacote Commander, utilize o seguinte comando (exemplo):
 
 ```bash
 npm run start:js:prod:cli transfer-contacts-list transfer-list --sheet-id="1FVlfOM3pAxCuqzuPep8_vFidQ8FSH2jODecAD7ieNXc"
