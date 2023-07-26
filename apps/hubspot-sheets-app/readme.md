@@ -87,4 +87,6 @@ Após a execução bem-sucedida de qualquer um desses comandos, o servidor estar
 
 Para fins de exemplo, você pode seguir a planilha fornecida no seguinte URL: [Exemplo de Planilha](https://docs.google.com/spreadsheets/d/1FVlfOM3pAxCuqzuPep8_vFidQ8FSH2jODecAD7ieNXc).
 
-ALembre-se de que é importante configurar todas as variáveis de ambiente necessárias antes de iniciar o servidor e a planilha deve conter os dados com os cabeçalhos mostrados no exemplo.
+Lembre-se de que é importante configurar todas as variáveis de ambiente necessárias antes de iniciar o servidor e a planilha deve conter os dados com os cabeçalhos mostrados no exemplo.
+Além disos, o servidor rodará na porta 3000 por padrão, portanto, certifique-se de que a porta 3000 esteja disponível
+
