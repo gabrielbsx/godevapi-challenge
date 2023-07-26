@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-const { Server } = require('./main/server')
+import { Server } from './main/server.js'
 
 const server = new Server()
 server.bootstrap()

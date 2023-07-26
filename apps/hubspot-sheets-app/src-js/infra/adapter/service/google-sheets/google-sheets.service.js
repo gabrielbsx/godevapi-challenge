@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { JWT } = require('google-auth-library')
-const { GoogleSpreadsheet } = require('google-spreadsheet')
-const { GoogleSheetsServiceMapper } = require('./mapper/google-sheets.mapper')
+import { JWT } from 'google-auth-library'
+import { GoogleSpreadsheet } from 'google-spreadsheet'
+import { GoogleSheetsServiceMapper } from './mapper/google-sheets.mapper.js'
 
-module.exports = class GoogleSheetsServiceImpl {
+export class GoogleSheetsServiceImpl {
   static serviceAccountAuth
 
   constructor () {

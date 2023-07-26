@@ -1,4 +1,4 @@
-module.exports = class CommanderControllerAdapter {
+export class CommanderControllerAdapter {
   static adapt (controller) {
     return async (args) => {
       const cliResponse = await controller.handle(args)

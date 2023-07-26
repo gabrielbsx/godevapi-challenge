@@ -1,4 +1,4 @@
-module.exports = class ExpressControllerAdapter {
+export class ExpressControllerAdapter {
   static adapt (controller) {
     return async (req, res) => {
       try {

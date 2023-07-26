@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-const { program } = require('commander')
-const { TransferContactsListAction } = require('./action/transfer-contacts-list.action')
-const { config } = require('dotenv')
+import { program } from 'commander'
+import { TransferContactsListAction } from './action/transfer-contacts-list.action.js'
+import { config } from 'dotenv'
 
-module.exports = class ServerCli {
+export class ServerCli {
   app
 
   constructor () {

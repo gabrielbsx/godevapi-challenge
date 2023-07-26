@@ -4,11 +4,18 @@
   "description": "",
   "main": "src/main.ts",
   "scripts": {
-    "start:dev": "tsx watch src/main.ts",
-    "start:dev:cli": "tsx watch src/cli.ts",
+    "start:ts:dev:http": "tsx watch src/main.ts",
+    "start:ts:dev:cli": "tsx watch src/cli.ts",
+    "start:js:dev:http": "node src-js/main.js",
+    "start:js:dev:cli": "node src-js/cli.js",
     "test:unit": "vitest",
     "build": "tsup src"
   },
+  "imports": {
+    "@core/*": ["./src/core/*"],
+    "@infra/*": ["./src/infra/*"]
+  },
+  "type": "module",
   "author": "gabrielbsx",
   "license": "ISC",
   "devDependencies": {

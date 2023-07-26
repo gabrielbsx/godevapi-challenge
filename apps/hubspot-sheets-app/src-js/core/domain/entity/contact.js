@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-module.exports = class Contact {
+export class Contact {
   _id
   props
 

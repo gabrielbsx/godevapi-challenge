@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/no-var-requires */
-const express = require('express')
-const { TransferContactsListRoute } = require('./route/transfer-contacts-list.route')
-const { config } = require('dotenv')
+import express from 'express'
+import { TransferContactsListRoute } from './route/transfer-contacts-list.route.js'
+import { config } from 'dotenv'
 
-module.exports = class Server {
+export class Server {
   app
 
   constructor () {

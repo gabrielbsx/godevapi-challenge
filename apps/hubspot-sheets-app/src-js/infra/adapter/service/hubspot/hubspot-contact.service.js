@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
-const { Client } = require('@hubspot/api-client')
-const { HubspotContactServiceMapper } = require('./mapper/hubspot-contact.mapper')
+import { Client } from '@hubspot/api-client'
+import { HubspotContactServiceMapper } from './mapper/hubspot-contact.mapper.js'
 
-module.exports = class HubspotContactService {
+export class HubspotContactService {
   static hubspotClient = new Client({ accessToken: process.env.HUBSPOT_API_KEY })
   isSpreadSheet = false
 

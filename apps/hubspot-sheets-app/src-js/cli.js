@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const { ServerCli } = require('./main/server-cli')
+import { ServerCli } from './main/server-cli.js'
 
 const server = new ServerCli()
 server.bootstrap()
