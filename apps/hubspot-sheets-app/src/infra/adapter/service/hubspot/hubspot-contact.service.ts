@@ -4,7 +4,7 @@ import { Client } from '@hubspot/api-client'
 import { HubspotContactServiceMapper } from './mapper/hubspot-contact.mapper'
 import { type BatchInputPublicObjectId } from '@hubspot/api-client/lib/codegen/crm/associations'
 import { type SimplePublicObjectInputForCreate, type SimplePublicObjectWithAssociations } from '@hubspot/api-client/lib/codegen/crm/companies'
-import { type Replace } from '@godevapi/helpers'
+import { type Replace } from '@helpers/replace'
 
 export interface ContactWithAssociation { business?: SimplePublicObjectWithAssociations, contact: SimplePublicObjectWithAssociations }
 export type ContactsWithAssociations = Array<Replace<ContactWithAssociation, { business: SimplePublicObjectWithAssociations }>>

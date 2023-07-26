@@ -1,6 +1,0 @@
-
-> hubspot-sheets-app@1.0.0 build /home/gabriel/Documentos/HandsOn/godevapi-challenge/apps/hubspot-sheets-app
-> tsup src
-
-Cannot find src
- ELIFECYCLE  Command failed with exit code 1.

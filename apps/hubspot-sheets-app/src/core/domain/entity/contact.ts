@@ -1,4 +1,4 @@
-import { type Replace } from '@godevapi/helpers'
+import { type Replace } from '@helpers/replace'
 import { type Business } from './business'
 import { type ContactEmail } from './contact-email'
 

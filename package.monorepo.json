@@ -1,0 +1,13 @@
+{
+  "name": "godevapi-challenge",
+  "private": true,
+  "scripts": {
+    "dev": "turbo dev --parallel",
+    "build": "turbo build --parallel"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "author": "gabrielbsx"
+}
