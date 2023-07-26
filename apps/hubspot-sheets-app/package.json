@@ -5,8 +5,8 @@
   "scripts": {
     "start:ts:dev:http": "tsx watch src/main.ts",
     "start:ts:dev:cli": "tsx watch src/cli.ts",
-    "start:js:dev:http": "node src-js/main.js",
-    "start:js:dev:cli": "node src-js/cli.js",
+    "start:js:prod:http": "node src-js/main.js",
+    "start:js:prod:cli": "node src-js/cli.js",
     "predeploy": "rm -rf node_modules && npm i --production",
     "deploy": "npx serverless deploy --verbose",
     "deploy:local": "serverless offline",
@@ -41,6 +41,7 @@
     "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
     "eslint-plugin-promise": "^6.0.0",
     "express": "^4.18.2",
+    "google-auth-library": "^8.9.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "tsup": "^7.1.0",
     "tsx": "^3.12.7",
