@@ -10,7 +10,7 @@ provider:
 plugins:
   - serverless-plugin-typescript
   - serverless-tscpaths
-  # - serverless-aws-alias
+  - serverless-offline
 
 functions:
   hubspotsheets:
@@ -20,6 +20,6 @@ functions:
       GOOGLE_PRIVATE_KEY: "credentials.json"
     events:
       - http:
-          path: hubspotsheets
+          path: hubspotsheets/{sheetId}
           method: get
           cors: true
