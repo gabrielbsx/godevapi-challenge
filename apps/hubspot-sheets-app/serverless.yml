@@ -1,0 +1,25 @@
+service: hubspot-sheets-app
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: sa-east-1
+  memorySize: 256
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-tscpaths
+  # - serverless-aws-alias
+
+functions:
+  hubspotsheets:
+    handler: src/hubspotsheets.handle
+    environment:
+      HUBSPOT_API_KEY: "pat-na1-db0c5739-b803-4741-8e37-7061da85bdf1"
+      GOOGLE_PRIVATE_KEY: "credentials.json"
+    events:
+      - http:
+          path: hubspotsheets
+          method: get
+          cors: true
