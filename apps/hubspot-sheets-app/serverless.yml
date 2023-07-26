@@ -7,9 +7,9 @@ provider:
   region: sa-east-1
   memorySize: 256
 
-package:
-  exclude:
-    - node_modules/**
+# package:
+#   exclude:
+#     - node_modules/**
 
 plugins:
   - serverless-plugin-typescript
